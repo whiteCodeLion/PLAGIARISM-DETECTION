@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <title>Text Upload</title>
+</head>
+<body>
+    <center>
+        <h1>WELCOME TO SOURCE</h1>
+        <p>Source is a plagiarism detection software that detects source plagiarism within academic work.
+            To determine the plagiarism level of your work kindly enter your text below.
+        </p>
+        <form method="POST" action="/upload">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label for="text">Enter text:</label>
+            <br>
+            <textarea name="text" id="text"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </center>
+</body>
+</html>
