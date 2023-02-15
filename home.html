@@ -11,7 +11,7 @@
         <p>Source is a plagiarism detection software that detects source plagiarism within academic work.
             To determine the plagiarism level of your work kindly enter your text below.
         </p>
-        <form method="POST" action="/upload">
+        <form id="upload-form" method="POST" action="/upload">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <label for="text">Enter text:</label>
             <br>
